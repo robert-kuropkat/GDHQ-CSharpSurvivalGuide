@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     public int    myScore    = 0;
     public bool   hasKey     = false;
     public int    myAmmo     = 3;
+    public int    myPoints   = 0;
 
 
     void Start()
@@ -59,6 +60,17 @@ public class Player : MonoBehaviour
                  );
         Debug.Log(hasKey ? "I have the key." : "I do not have the key.");
 
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            myPoints += 10;
+            Debug.Log( myPoints < 50 ? "My current points is " + myPoints : "You are awesome! " + myPoints);
+        }
+
+        
     }
 
 }

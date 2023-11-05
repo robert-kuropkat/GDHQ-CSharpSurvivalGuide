@@ -22,7 +22,11 @@ using UnityEngine;
 ///    - Because Unity uses floats, Mathf is the preferred Math function over 
 ///      Math.
 ///    - Mathf.Round rounds to the nearest integer.  There is no way to make 
-///      Mathf round to a specific decimal place.
+///      Mathf round to a specific decimal place.  To get around this, first
+///      multiply your value by 100 (aka. move the decimal two places to the
+///      right), pass that value to Mathf.Round() then divide that result by
+///      100 (aka. move the decimal back 2 places to the left) and viola!
+///      Note: this won't change the formatting, ie. print trailing zeros. 
 /// 
 /// </remarks>
 /// 
@@ -40,9 +44,9 @@ public class TipCalculator : MonoBehaviour
         float totalAmount = myBill + totalTip;
 
         Debug.Log( "Your bill is: $" + myBill + ". "
-                 + "Your tip is: $" + totalTip
+                 + "Your tip is: $" + Mathf.Round(totalTip*100)/100
                  + " (based on " + tipPercentage + "%) "
-                 + "bringing your total ammount to $" + totalAmount + "."
+                 + "bringing your total ammount to $" + Mathf.Round(totalAmount*100)/100 + "."
                  );
     }
 
