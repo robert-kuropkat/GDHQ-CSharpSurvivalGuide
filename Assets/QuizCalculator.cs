@@ -41,7 +41,15 @@ public class QuizCalculator : MonoBehaviour
                  + quizScores[3] + " - " 
                  + quizScores[4]
                  );
-        Debug.Log("Average Quiz Score: " + quizScores.Average());
+        double classAverage = quizScores.Average();
+        Debug.Log("Average Quiz Score: " + classAverage);
+
+        if      ( classAverage >= 90 && classAverage <= 100 ) { Debug.Log("Class average is an A"); }
+        else if ( classAverage >= 80 && classAverage < 90 )   { Debug.Log("Class average is a B"); }
+        else if ( classAverage >= 70 && classAverage < 80 )   { Debug.Log("Class average is a C"); }
+        else if ( classAverage < 70 )                         { Debug.Log("Class is failing"); }
+        else                                                  { Debug.Log("Invalid grade average."); }
+
     }
 
 }
