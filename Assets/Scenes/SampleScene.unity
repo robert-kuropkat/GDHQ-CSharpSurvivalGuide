@@ -399,7 +399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637888247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ff515415e050b4db6e90dae494a8e0, type: 3}
+  m_Script: {fileID: 11500000, guid: be6d62baf4afc8a4d9d620d7055d8b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myWeapon: 0
+  apples: 0
