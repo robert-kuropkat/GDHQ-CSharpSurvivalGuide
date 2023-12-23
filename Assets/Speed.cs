@@ -10,11 +10,15 @@ public class Speed : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.S)) { speed++; }
-        if (Input.GetKeyDown(KeyCode.A) && speed != 0) { speed--; }
+        if (Input.GetKeyDown(KeyCode.S)) { speed++; LogIt(); }
+        if (Input.GetKeyDown(KeyCode.D) && speed != 0) { speed--; LogIt(); }
+        //LogIt();
+    }
 
-        if      (speed > 20) { Debug.Log("Slow Down! "       + speed + " is too fast."); } 
-        else if (speed == 0) { Debug.Log("Speed Up! "        + speed + " is too slow."); } 
-        else                 { Debug.Log("Current speed is " + speed); }
+    void LogIt()
+    {
+        if (speed > 20) { Debug.Log("Slow Down! " + speed + " is too fast."); }
+        else if (speed == 0) { Debug.Log("Speed Up! " + speed + " is too slow."); }
+        else { Debug.Log("Current speed is " + speed); }
     }
 }
