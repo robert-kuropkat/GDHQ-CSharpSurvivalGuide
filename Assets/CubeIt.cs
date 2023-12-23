@@ -11,13 +11,40 @@ public class CubeIt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myCube.GetComponent<Renderer>().material.color = Color.red;
+        myCube.GetComponent<Renderer>().material.color = Color.yellow;
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdatePoints();
+        // UpdatePoints();
+        SwitchColor();
+    }
+
+    void SwitchColor()
+    {
+        if (Input.anyKeyDown)
+        {
+            switch (Input.inputString)
+            {
+                case "1":
+                    myCube.GetComponent<Renderer>().material.color = Color.blue;
+                    break;
+                case "2":
+                    myCube.GetComponent<Renderer>().material.color = Color.red;
+                    break;
+                case "3":
+                    myCube.GetComponent<Renderer>().material.color = Color.green;
+                    break;
+                case "4":
+                    myCube.GetComponent<Renderer>().material.color = Color.black;
+                    break;
+                default:
+                    myCube.GetComponent<Renderer>().material.color = Color.yellow;
+                    break;
+            }
+        }
+
     }
 
     void UpdatePoints()
