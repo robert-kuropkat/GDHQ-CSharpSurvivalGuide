@@ -25,30 +25,25 @@ using UnityEngine;
 public class AmIDeadYet : MonoBehaviour
 {
     [SerializeField]
-    private int  playerHealth     = 100;
-    [SerializeField]
-    private bool playerStillAlive = true;
+    private int playerHealth = 100;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (  Input.GetKeyDown(KeyCode.Space)
-           && playerHealth > 0 ) { playerHealth -= DoDamage(); }
-        if ( playerStillAlive && playerHealth < 1 ) 
-        { 
-            playerStillAlive = false;
-            Debug.Log("Player has died!");
-        }
+        if (  playerStillAlive()
+           && AttackSuccessful() ) { DoDamage(); }
     }
 
-    private int DoDamage()
+    private bool playerStillAlive() { return playerHealth > 0; }
+
+    private bool AttackSuccessful() { return Input.GetKeyDown(KeyCode.Space); }
+
+    private void DoDamage()
     {
-        return Random.Range(0, playerHealth + 1);
+        playerHealth -= CalculateDamage();
+        if ( !playerStillAlive() ) { publishObituary(); }
     }
+
+    private int  CalculateDamage()  { return Random.Range(0, playerHealth + 1); }
+
+    private void publishObituary()  { Debug.Log("Player has died!"); }
 }
