@@ -29,21 +29,21 @@ public class AmIDeadYet : MonoBehaviour
 
     void Update()
     {
-        if (  playerStillAlive()
+        if (  PlayerStillAlive()
            && AttackSuccessful() ) { DoDamage(); }
     }
 
-    private bool playerStillAlive() { return playerHealth > 0; }
+    private bool PlayerStillAlive() { return playerHealth > 0; }
 
     private bool AttackSuccessful() { return Input.GetKeyDown(KeyCode.Space); }
 
     private void DoDamage()
     {
         playerHealth -= CalculateDamage();
-        if ( !playerStillAlive() ) { publishObituary(); }
+        if ( !PlayerStillAlive() ) { PublishObituary(); }
     }
 
     private int  CalculateDamage()  { return Random.Range(0, playerHealth + 1); }
 
-    private void publishObituary()  { Debug.Log("Player has died!"); }
+    private void PublishObituary()  { Debug.Log("Player has died!"); }
 }
