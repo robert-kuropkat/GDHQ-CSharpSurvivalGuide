@@ -8,7 +8,6 @@ public class LoopDeDoop : MonoBehaviour
     public int mySpeed = 0;
     public int MaxSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
         MaxSpeed = Random.Range(60, 121);
@@ -18,22 +17,6 @@ public class LoopDeDoop : MonoBehaviour
         //StartCoroutine(AddApples());
         StartCoroutine(AccelerateToMaxSpeed());
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    IEnumerator AccelerateToMaxSpeed()
-    {
-        while (mySpeed != MaxSpeed)
-        {
-            if (mySpeed < MaxSpeed) { mySpeed += 5; }
-            if (mySpeed > MaxSpeed) { mySpeed = MaxSpeed; }
-            yield return new WaitForSeconds(1f);
-        }
-        Debug.Log("Out of Loop.  My Speed = " + mySpeed);
     }
 
     private void LoopCounting()
@@ -77,6 +60,17 @@ public class LoopDeDoop : MonoBehaviour
         }
 
 
+    }
+
+    IEnumerator AccelerateToMaxSpeed()
+    {
+        while (mySpeed != MaxSpeed)
+        {
+            if (mySpeed < MaxSpeed) { mySpeed += 5; }
+            if (mySpeed > MaxSpeed) { mySpeed = MaxSpeed; }
+            yield return new WaitForSeconds(1f);
+        }
+        Debug.Log("Out of Loop.  My Speed = " + mySpeed);
     }
 
     IEnumerator AddApples()
