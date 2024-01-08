@@ -23,7 +23,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //
-    // Setup variables with default values
+    // Variables fir Pii mtehod
     //
     public string myName     = "Robert";
     public int    myAge      = 57;
@@ -32,13 +32,24 @@ public class Player : MonoBehaviour
     public int    myScore    = 0;
     public bool   hasKey     = false;
     public int    myAmmo     = 3;
+
+    //
+    // Variables for UpdatePoints method
+    //
     public int    myPoints   = 0;
     public bool   myAwsome   = false;
 
+    //
+    // Variables for OutputMode method call
+    //
     public const int easyDifficulty   = 0;
     public const int mediumDifficulty = 1;
     public const int hardDifficulty   = 2;
     public int       currentDifficulty;
+
+    //
+    // Comment or uncomment methods calls as needed to run each challenge.
+    //
 
     private void Start()
     {
@@ -49,9 +60,17 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        UpdatePoints();
-        OutputMode();
+        // UpdatePoints();
+        // OutputMode();
     }
+
+    /// <summary>
+    /// Else-If Statements
+    /// </summary>
+    /// 
+    /// <remarks>
+    /// </remarks>
+    ///
 
     private void OutputMode()
     {
@@ -60,6 +79,10 @@ public class Player : MonoBehaviour
         else if (currentDifficulty == hardDifficulty)   { Debug.Log("You selected HARD mode."); }
         else                                            { Debug.Log("INVALID mode."); }
     }
+
+    /// <summary>
+    /// Variables overview
+    /// </summary>
 
     void Pii()
     {
@@ -88,12 +111,20 @@ public class Player : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Challenge Master If-Statements P01 & P02 & P03
+    /// </summary>
+    /// 
+    /// <remarks>
+    /// </remarks>
+    ///
+
     void UpdatePoints()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             myPoints += 10;
-            Debug.Log( myPoints < 50 ? "My current points is " + myPoints : "You are awesome! " + myPoints);
+            Debug.Log( myPoints < 50 ? "My current points are " + myPoints : "You are awesome! " + myPoints);
         }
 
         if (   myPoints >= 50

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 
 /// <summary>
 /// Unity C# Survival Guide - Practical Presentation Return Array
@@ -46,4 +47,24 @@ public class CubeArray : MonoBehaviour
         return cubes;
     }
 
+=======
+public class CubeArray : MonoBehaviour
+{
+    public GameObject[] cubes;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //foreach (var cube in cubes)
+            //{
+            //    cube.GetComponent<Renderer>().material.color = Color.red;
+            //}
+            for (int i = 0; i < cubes.Length; i++)
+            {
+                cubes[i].GetComponent<Renderer>().material.color = Color.red;
+            }
+        }
+    }
+>>>>>>> dcebb6cd41cf90d1e24547e9d6632094c9d0a41c
 }

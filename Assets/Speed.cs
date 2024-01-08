@@ -2,6 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Unity C# Survival Guide - Challenge Speed Program.
+/// </summary>
+/// 
+/// <remarks>
+/// Instantiated By: 
+/// Attached To: Main Camera
+/// 
+/// Increase and decrease the speed variable everytime the 'S' or 'A' keys are pressed.
+/// If the speed exceeds 20, print a message to slow down.  If the speed is zero print
+/// a message to speed up.
+/// </remarks>
+/// 
+
 public class Speed : MonoBehaviour
 {
 
