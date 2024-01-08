@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeArray : MonoBehaviour
+public class CubeArrayRed : MonoBehaviour
 {
     public GameObject[] cubes;
 
