@@ -37,11 +37,12 @@ public class CubeArray : MonoBehaviour
     {
         GameObject[] cubes = GameObject.FindGameObjectsWithTag("Player");
 
-        foreach ( GameObject cube in cubes)
+        foreach (GameObject cube in cubes)
         {
             cube.GetComponent<Renderer>().material.color = new Color(Random.value, Random.value, Random.value, Random.value);
         }
 
         return cubes;
     }
+}
 
