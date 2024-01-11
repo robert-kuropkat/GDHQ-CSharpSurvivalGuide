@@ -2,6 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Unity C# Survival Guide - 40_Challenge Master Switch Statements P01
+/// </summary>
+/// 
+/// <remarks>
+/// Instantiated By: 
+/// Attached To: Main Camera
+/// 
+/// 
+/// 
+/// Things I discovered:
+/// 
+///   - 
+///
+/// </remarks>
+/// 
+
+
+
 public class SwitchARoo : MonoBehaviour
 {
     public int points;
