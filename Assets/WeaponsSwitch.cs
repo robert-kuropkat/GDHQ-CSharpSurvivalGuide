@@ -2,6 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Unity C# Survival Guide - Weapons Select Challenge
+/// </summary>
+/// 
+/// <remarks>
+/// Instantiated By: 
+/// Attached To: Main Camera
+///
+/// Check for user keypress of 0-3 and switch weapons accordingly:
+///    0 - no weapong
+///    1 - handgun
+///    2 - knife
+///    3 - machine gun
+/// 
+/// Things I discovered:
+/// 
+///   - In SwitchARoo.cs I commented how the switch statement 
+/// 
+/// </remarks>
+/// 
+
 public class WeaponsSwitch : MonoBehaviour
 {
 

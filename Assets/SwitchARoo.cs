@@ -10,11 +10,19 @@ using UnityEngine;
 /// Instantiated By: 
 /// Attached To: Main Camera
 /// 
-/// 
+/// Using an if-else-elseif statement, "award" points based on a key press
+/// (Q, W or E).  Then, using a switch statement, print out the number of
+/// points awarded.
 /// 
 /// Things I discovered:
 /// 
-///   - 
+///   - More of a reminder, but switch statements can only evaluate a single 
+///     variable.  The case statements can check for an exact value (as below)
+///     or they can use the other common, relational (comparison) operators 
+///     such as <= as well as the logical operators and, not and or.
+///     Since the Input.GetKeyDown(KeyCode.<>) only returns a bool, it cannot
+///     be used in a switch statment directly.
+///   - NOTE:  See WeaponsSwitch.cs for an alternative approach
 ///
 /// </remarks>
 /// 

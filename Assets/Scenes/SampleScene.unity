@@ -585,11 +585,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637888247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a609dc9242f03f34eb50d0636b69e233, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ff515415e050b4db6e90dae494a8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubes:
-  - {fileID: 715024634}
-  - {fileID: 1371395405}
-  - {fileID: 1061810073}
-  currentColor: white
+  myWeapon: 0
